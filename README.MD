@@ -12,7 +12,7 @@ Prioriteringslista:
 Skapa klassdiagram över projektet
 Lyckas länka databasen med jAVA med hjälp av mysql connector.
 Göra så att spelet går att spela i Konsollen
-Göra ett GUI som
+Göra ett GUI
 Göra så att spelet går att spela i GUIt
 
 
