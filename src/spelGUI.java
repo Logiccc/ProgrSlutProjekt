@@ -1,6 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * Detta är GUIt till själva spelet och saknar design.
+ */
 public class spelGUI {
     private JPanel gui;
     private JTextArea textArea1;

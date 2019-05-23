@@ -7,8 +7,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 */
+
+/**
+ * Detta dokument är till för att skapa en connection mellan mysql databasen, LaTriviata, till java.
+ */
 public class DBEx {
 
+    /**
+     * Saker som angår databasen, som hostname och dbName, vilket är databas namnet.
+     */
     public static final String DEFAULT_DRIVER_CLASS = "com.mysql.jdbc.Driver";
     public static String hostname = "localhost";
     public static String dbName = "LaTriviataRP";
@@ -17,6 +24,10 @@ public class DBEx {
     private static final String DEFAULT_USERNAME = "david";
     private static final String DEFAULT_PASSWORD = "persson";
 
+    /**
+     * När classen körs, så printar den ut text från 'story' i databasen till terminalen.
+     * @param args
+     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String choice;
@@ -34,9 +45,9 @@ public class DBEx {
                 ResultSet rs = null;
                 ResultSet ls = null;
                 int id = 1;
-                ps = connection.prepareStatement("SELECT text FROM story WHERE id = " + id);
+                ps = connection.prepareStatement("SELECT text FROM story WHERE id = " + id);//tar texten från databasens story
                 rs = ps.executeQuery();
-                ps = connection.prepareStatement("SELECT text FROM storylinks WHERE storyid = " + id);
+                ps = connection.prepareStatement("SELECT text FROM storylinks WHERE storyid = " + id); 
                 js = ps.executeQuery();
 
 
